@@ -1,12 +1,15 @@
-//String de datos de nodejs
+//String de datos de nodejs (investigar)
 let argv = process.argv
-const https= require('https'),
-    options = {
-        host:argv[2],
-        port : 443,
-        
-    }
+const http= require('http')
+    // options = {
+    //     host:argv[2],
+    //     port : 83,
 
-https.get(options,response=>console.log(response.statusCode))
-.on('error',err=>console.log(err))
+    // }
+//ctrl+?'
+http.get(argv[2],response=>{
+    response.on('data',data=>console.log(data.toString()))
+    .on('error',err=>console.log(err))
+})
+// .on('data',data=>console.log(`Objeto ${data}`))
 // console.log(process.argv)
