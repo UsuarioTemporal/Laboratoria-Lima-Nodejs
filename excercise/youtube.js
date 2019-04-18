@@ -102,7 +102,7 @@ let users = [
     ]
 let condition = user =>user.edad>=20 && user.edad<30
 let newArr = users.filter(condition)
-// console.log(newArr)
+console.log(newArr)
 
 /////////////////////////////////////////////////////////////////////
 

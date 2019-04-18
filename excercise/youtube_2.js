@@ -1,0 +1,1 @@
+// Imaginemos que de un array de objetos queremos crear un hasmap con los id de esos objetospara que las consultas sean mas eficientes y no recorreer todo el arrya hasta encontrar el objeto querido
