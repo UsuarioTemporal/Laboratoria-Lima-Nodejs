@@ -4,3 +4,6 @@
 // a) countdown(1) retorna [1]
 // b) countdown(5) retorna [5, 4, 3, 2, 1]
 
+const countdown = number=>!number ? [] : [number].concat(countdown(number-1))
+console.log(countdown(1))
+console.log(countdown(5))
