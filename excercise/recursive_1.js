@@ -1,4 +1,4 @@
-/* Como lo dice el maestro @LupoMontero (twitter) la recursividad no es una cosa
+/* Como lo dice el maestro @lupomontero (twitter) la recursividad no es una cosa
     es una caracteristica de una cosa
 
     https://medium.com/laboratoria-developers/recursi%C3%B3n-o-recursividad-ec8f1a359727
