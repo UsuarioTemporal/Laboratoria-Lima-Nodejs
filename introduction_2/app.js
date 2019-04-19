@@ -2,9 +2,10 @@ const {file}= require('./index')
 const {dir}= require('./index_2')
 
 const apps = async(path,extention)=>{
-    const data = await dir(path)
+    const data = await dir(path) // esto devolvera una promesa con una lista de todos los archivos que esncuentran en el directorio
     // console.log(data)
     let newArr = data.filter(item=>item.endsWith(extention))
+
     return Promise.all(newArr.map(item => file(path, item)))
 }
 
