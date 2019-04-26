@@ -1,5 +1,8 @@
-// En el entorno del navegador, implementa una función que reciba un objeto de tipo HTMLElement (ej: document.body) como argumento, recorra recursivamente el DOM desde el nodo que nos han pasado y retorne un objeto con la estructura encontrada (ver ejemplo más abajo).
+/*En el entorno del navegador, implementa una función que reciba un objeto de tipo HTMLElement
+ (ej: document.body) como argumento, recorra recursivamente el DOM desde el nodo que nos han
+  pasado y retorne un objeto con la estructura encontrada (ver ejemplo más abajo).
 
+*/
 // `object domToObj( HTMLElement el )`
 
 // Ejemplo:
@@ -30,3 +33,4 @@
 //  { "id": "", "tag": "A", "className": "bar", "children": []}
 //  ]
 // }
+
