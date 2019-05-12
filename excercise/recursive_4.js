@@ -34,3 +34,13 @@
 //  ]
 // }
 
+const domToObj = element=>{
+  return {
+    id:element.id,
+    tag:element.tag,
+    tagName:element.tagName,
+    children:[...element.children].map(domToObj)
+  }
+}
+let body = document.querySelector('body');
+console.log(domToObj(body))

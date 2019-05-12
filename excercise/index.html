@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <body class="classbody" id="idbody">
+        <div class="soyclasediv" id="soyiddiv">
+            <p class="soyclasep" id="soyidp">Hola mundo
+                <b> :v ...</b>
+            </p>
+            <h2>Soy un subtitulo >:v</h2>
+        </div>
+        <script class="magia:v">
+            (element=>{
+                const domToObj = element =>{
+                    return{
+                        id:element.id,
+                        className:element.className,
+                        tagName:element.tagName,
+                        children:[...element.children].map(domToObj)
+                    }
+                };
+                console.log(domToObj(element))
+            })(document.querySelector('body'));
+        </script>
+    </body>
+</html>
