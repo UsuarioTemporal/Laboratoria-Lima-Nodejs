@@ -73,8 +73,16 @@ const checkCondition = (arr,element) =>{
 
 const fn = (acc,curr,index,arr)=>`${acc}-${curr}`
 const reduce = ([a,...b],fn,initValue)=>a?reduce(b,fn,fn(initValue,a)):initValue
-
 const map = (arr,fn)=>reduce(arr,(acc,curr)=>acc.concat(fn(curr,arr)),[])
 const filter = (arr,fn)=>reduce(arr,(acc,curr)=>fn(curr)? acc.concat(curr) :acc,[])
 
-console.log(filter([1,2,3],element=>element%2===0))
+const reduce_2 = (arr,fn,initValue)=>{
+    const recursive = ([a,...b],fn,index,initValue)=>a?recursive(b,fn,index+1,fn(initValue,a,index,arr)):initValue
+    return recursive(arr,fn,0,initValue)
+}
+
+const map_2 = (arr,fn)=>reduce_2(arr,(acc,curr,index,arr)=>acc.concat(fn(curr,index,arr)),[])
+const filter_2 = (arr,fn)=>reduce_2(arr,(acc,curr,index,arr)=>fn(curr,index,arr)?acc.concat(curr):acc,[])
+
+// console.log(filter([1,2,3],element=>element%2===0))
+console.log(filter_2([1,2,3],element=>element%2===0))
