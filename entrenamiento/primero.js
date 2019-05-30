@@ -86,3 +86,7 @@ const filter_2 = (arr,fn)=>reduce_2(arr,(acc,curr,index,arr)=>fn(curr,index,arr)
 
 // console.log(filter([1,2,3],element=>element%2===0))
 console.log(filter_2([1,2,3],element=>element%2===0))
+
+
+let arr = [2,6,8,0,9,-10,-1]
+
