@@ -33,7 +33,7 @@ const compareObject =(obj1,obj2)=>{
 
 // console.log(compareArrays(['a',09],['a',09]))
 const print = console.log
-print(compareObject(objetoA,objetoB))
+// print(compareObject(objetoA,objetoB))
 
 
 
@@ -62,7 +62,19 @@ const spreadOperationObject = ()=>{
 const checkCondition = (arr,element) =>{
 
     //Esto es un closure
-    const recursive = (arr)=>{}
+    const recursive = arr=>{
+
+    }
+    return recursive(arr)
 }
 
-console.log(checkCondition([],))
+// console.log(checkCondition([2,6,8,0,9,-10,-1],8))
+
+
+const fn = (acc,curr,index,arr)=>`${acc}-${curr}`
+const reduce = ([a,...b],fn,initValue)=>a?reduce(b,fn,fn(initValue,a)):initValue
+
+const map = (arr,fn)=>reduce(arr,(acc,curr)=>acc.concat(fn(curr,arr)),[])
+const filter = (arr,fn)=>reduce(arr,(acc,curr)=>fn(curr)? acc.concat(curr) :acc,[])
+
+console.log(filter([1,2,3],element=>element%2===0))
