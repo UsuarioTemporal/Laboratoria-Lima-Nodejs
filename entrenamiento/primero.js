@@ -90,3 +90,10 @@ console.log(filter_2([1,2,3],element=>element%2===0))
 
 let arr = [2,6,8,0,9,-10,-1]
 
+const recorre = arr =>{
+    const recursive = (arr,index)=>{
+        if(index===arr.length) return 
+        return recursive(arr,index+1)
+    }
+    return recursive(arr,0)
+}
