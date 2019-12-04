@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const processErrors = fn => (req,res,next)=>{
-    fn(rq,res,next)
+    fn(req,res,next)
         .catch(next)
 }
 
@@ -28,7 +28,7 @@ const errorsDevelopment = (err,req,res,next)=>{
     })
 }
 
-const processErrorsLargeSizeBody = (err.req,res,next)=>{
+const processErrorsLargeSizeBody = (err,req,res,next)=>{
     if(err.status === 413){
         console.log(req,path, ' excedio el limite');
     }

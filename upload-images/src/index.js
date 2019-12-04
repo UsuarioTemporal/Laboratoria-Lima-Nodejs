@@ -12,7 +12,10 @@ app.use(processErrorsLargeSizeBody)
 // se hara el verbo PUT porque en este caso la operación será idempotente
 // es decir que el estado del servidor luego de realizarla será la misma
 app.put('/',processErrors(async (req,res)=>{
+    console.log(req.body);
     res.json({
         url:'blabla'
     })
 }))
+
+app.listen(1700)
